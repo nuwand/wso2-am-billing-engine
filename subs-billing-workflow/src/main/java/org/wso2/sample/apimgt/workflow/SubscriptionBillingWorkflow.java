@@ -67,7 +67,7 @@ public class SubscriptionBillingWorkflow extends SubscriptionCreationSimpleWorkf
 
         if(!userExists){
             HttpWorkflowResponse httpworkflowResponse = new HttpWorkflowResponse();
-            httpworkflowResponse.setRedirectUrl("http://localhost:8080/apim-billing-engine");
+            httpworkflowResponse.setRedirectUrl("http://localhost:8080/apim-billing-engine/");
             httpworkflowResponse.setAdditionalParameters("CallbackUrl",
                     "http://localhost:9763/store/site/blocks/workflow/workflow-listener/ajax/workflow-listener.jag");
             httpworkflowResponse.setAdditionalParameters("workflowRefId" , workflowDTO.getExternalWorkflowReference());
